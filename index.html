@@ -11,7 +11,7 @@
     let canvas;
     let finished = false;
   </script>
-  <script src="scripts.js"></script>
+  <script src="maze.js"></script>
   <title>Maze</title>
 </head>
 <body>
@@ -19,19 +19,6 @@
     ASCII MAZE
     <div class="subtitle"><a id="download">save</a> this maze as an image</div>
   </div>
-  <script type="text/javascript">
-    $('#download').on('click',function(){
-      console.log("entered");
-      console.log(canvas.canvas);
-      if(finished){
-        let c = canvas.canvas;
-        let url = c.toDataURL('image/jpeg');
-        let w = window.open('about:blank', 'maze');
-        w.document.write("<img src='"+ url +"' alt='maze' />");
-      }else {
-        alert('wait for the whole maze to load');
-      }
-      });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
