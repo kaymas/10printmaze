@@ -5,9 +5,8 @@ let spacing = 40;
 function setup(){
   let w = $(window).width();
   let h = $(window).height();
-  createCanvas(w,h);
-  background(33);
-
+  canvas = createCanvas(w,h);
+  // background(33);
 }
 
 function draw(){
@@ -26,5 +25,7 @@ function draw(){
   }
   if(y > height){
     noLoop();
+    finished = true;
+    console.log("finished :" + finished);
   }
 }

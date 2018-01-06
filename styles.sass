@@ -6,3 +6,30 @@ body
   margin: 0
   padding: 0
   overflow: hidden
+  position: relative
+  background: #333
+  color: white
+
+.back
+  position: absolute
+  width: 100vw
+  // left: 50%
+  top: 50%
+  transform: translate(0,-50%)
+  text-align: center
+  font-size: 12vw
+  z-index: 2
+  -webkit-text-fill-color: transparent
+  -webkit-background-clip: text
+  text-shadow: 0px 0px 0px rgba(255,255,255,0.3)
+
+  .subtitle
+    font-size: 3vw
+
+    a
+      text-shadow: 0px 0px 0px rgba(255,255,255,0.7)
+      text-decoration: none
+      cursor: pointer
+
+      &:hover
+        text-shadow: 0px 0px 0px rgba(255,255,255,0.3)

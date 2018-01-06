@@ -7,10 +7,31 @@
   <link rel="stylesheet" href="styles.min.css">
   <script src="p5.min.js"></script>
   <script src="jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+    let canvas;
+    let finished = false;
+  </script>
   <script src="scripts.js"></script>
   <title>Maze</title>
 </head>
 <body>
-
+  <div class="back">
+    ASCII MAZE
+    <div class="subtitle"><a id="download">save</a> this maze as an image</div>
+  </div>
+  <script type="text/javascript">
+    $('#download').on('click',function(){
+      console.log("entered");
+      console.log(canvas.canvas);
+      if(finished){
+        let c = canvas.canvas;
+        let url = c.toDataURL('image/jpeg');
+        let w = window.open('about:blank', 'maze');
+        w.document.write("<img src='"+ url +"' alt='maze' />");
+      }else {
+        alert('wait for the whole maze to load');
+      }
+      });
+  </script>
 </body>
 </html>
